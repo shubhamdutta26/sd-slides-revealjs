@@ -1,0 +1,76 @@
+---
+# title: Untitled
+format:
+  sd-slides-revealjs: default
+brand: brand/_brand.yml
+engine: knitr
+knitr:
+  opts_chunk: 
+    dev: "ragg_png"
+    dpi: 300
+---
+
+#  {background-image="images/1IGT_color.png" background-opacity="0.2"}
+
+[Developing a duobody for<br>treating Alzheimer's disease<br>in squirrel monkeys]{.custom-title}
+
+[Shubham Dutta, Ph.D.]{.custom-author}
+
+<br>
+
+[The Non Human Primate Reagent Resource]{.custom-url-nhprr}
+
+<br>
+
+[Massbiologics of UMMS]{.custom-url-mbl}
+
+[`r format(Sys.Date(), format="%B %d, %Y")`]{.title-date}
+
+[Background image: [Structure of murine immunoglobulin (1IGT)](http://doi.org/10.2210/pdb1IGT/pdb)]{.custom-aside}
+
+::: notes
+`r if (format(Sys.time(), "%H") < 12) {   "Good morning" } else {   "Good afternoon" }` everyone. Thank you for the opportunity to present my work here. My name is First Last, and I’m excited to share with you a unique and ongoing project where I have developed a duobody for treating Alzheimer’s disease in squirrel monkeys.
+:::
+
+## Introduction
+
+```{r}
+#| label: setup
+
+library(ggplot2)
+
+systemfonts::register_variant(
+  name = "Libertinus Normal",
+  family = "Libertinus Sans",
+  weight = "normal"
+)
+
+bg_color <- "#F2F0E3"
+
+sd_cols <- c(
+    `green`   = "#00a5a6",
+    `pink`    = "#e03d90",
+    `orange`  = "#fc6538",
+    `purple`  = "#6a3ecb",
+    `blue`    = "#0058dc",
+    `brown`   = "#a75237"
+  )
+
+theme_set(theme_bw())
+update_theme(
+  plot.background = element_rect(fill = bg_color, color = NA),
+  plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
+  panel.background = element_rect(fill = "white"),
+  text = element_text(family = "Libertinus Normal"),
+)
+```
+
+## Plot
+
+```{r}
+#| label: plot
+ggplot(pressure, aes(temperature, pressure)) +
+  geom_line() +
+  geom_point(color = "steelblue")
+  
+```

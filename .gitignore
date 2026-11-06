@@ -4,7 +4,7 @@
 .Ruserdata
 .DS_Store
 *.pdf
-*_files/
+/*_files/
 *.html
 /.quarto/
 _site/

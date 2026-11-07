@@ -3,7 +3,7 @@
 ## Installing
 
 ```bash
-quarto use template shubhamdutta26/sd-slides
+quarto use template shubhamdutta26/sd-slides-revealjs
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your article.

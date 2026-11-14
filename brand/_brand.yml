@@ -1,21 +1,20 @@
 color:
   palette:
-    light: "#F2F0E3ff"
-    dark: "#2E2E2Eff"
-    orange: "#F76F53ff"
-    blue: "#19426Cff"
-  foreground: blue
+    light: "#ECECEC"
+    darkgray: "#474747"
+    dark: "#2E2E2E"
+  foreground: dark
   background: light
-  primary: blue
+  primary: dark
 
 typography:
   fonts:
-    - family: Libertinus Sans
+    - family: Montserrat
       source: google
     - family: Libertinus Sans
       source: google
     - family: Fira Code
       source: google
   base: Libertinus Sans
-  headings: Libertinus Sans
+  headings: Montserrat
   monospace: Fira Code

@@ -40,12 +40,13 @@ knitr:
 library(ggplot2)
 
 systemfonts::register_variant(
-  name = "Libertinus Normal",
-  family = "Libertinus Sans",
-  weight = "normal"
+  name = "IBMPlexMono Medium",
+  family = "IBM Plex Mono",
+  weight = "medium"
 )
 
-bg_color <- "#F2F0E3"
+bg_color <- "#ECECEC"
+fg_color <- "#2E2E2E"
 
 sd_cols <- c(
     `green`   = "#00a5a6",
@@ -56,13 +57,19 @@ sd_cols <- c(
     `brown`   = "#a75237"
   )
 
-theme_set(theme_bw())
-update_theme(
-  plot.background = element_rect(fill = bg_color, color = NA),
-  plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
-  panel.background = element_rect(fill = "white"),
-  text = element_text(family = "Libertinus Normal"),
-)
+theme_custom <- function(base_size = 14) {
+  theme_bw(base_size = base_size) +
+    theme(
+      plot.background = element_rect(fill = bg_color, color = NA),
+      plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
+      panel.background = element_rect(fill = "white"),
+      text = element_text(family = "IBMPlexMono Medium"),
+      legend.text = element_markdown(),
+      axis.title.x = element_markdown(),
+      axis.title.y = element_markdown(),
+      panel.grid = element_blank()
+    )
+}
 ```
 
 ## Plot
@@ -71,6 +78,6 @@ update_theme(
 #| label: plot
 ggplot(pressure, aes(temperature, pressure)) +
   geom_line() +
-  geom_point(color = "steelblue")
-  
+  geom_point(color = "steelblue") +
+  theme_custom()
 ```

@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
 // fonts
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 // colors
 
@@ -10,7 +10,8 @@
 
 .reveal .custom-title {
   position: absolute;
-  color: #19426Cff;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
   font-size: 2.8em;
   font-weight: bold;
   text-align: left;
